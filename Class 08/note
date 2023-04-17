@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Div</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col-3 h-200">LOGO</div>
+<div class="col-6 h-200">BANNER</div>
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-3 h-50">MENU</div>
+<div class="col-3 h-50">MENU</div>
+<div class="col-3 h-50">MENU</div>
+<div class="col-3 h-50">MENU</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-2 h-600">SIDEBAR</div>
+<div class="col-10 h-600">MAIN CONTENT</div>
+</div>
+
+    <div class="row">
+<div class="col-3 h-250">BIG FOOTER ONE</div>
+<div class="col-3 h-250">BIG FOOTER TWO</div>
+<div class="col-3 h-250">BIG FOOTER THREE</div>
+<div class="col-3 h-250">BIG FOOTER FOUR</div>
+<div class="col-12 h-50">FOOTER</div>
+    </div>
+
+
+</body>
+</html>
