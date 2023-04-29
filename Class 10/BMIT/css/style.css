@@ -19,7 +19,7 @@
 
 [class*='col-']{
     float: left;
-    border: 1px solid gray;
+    /*border: 1px solid gray;*/
 }
 .container{
     width: 90%;
@@ -52,12 +52,17 @@ list-style-type: none;
     float: left;
     margin-right: 10px;
 
-}.header-top-left ul li a{
+}
+
+.header-top-left ul li a{
     float: left;
     margin-right: 10px;
      text-decoration: none;
 
 }
+
+
+
 .header-top-right a{
     float: right;
     text-decoration: none;
@@ -66,7 +71,58 @@ list-style-type: none;
 .header-top-bg{
     background-color: #E2E2E2;
 }
+.header-middle-bg{
+    background-color: #F6F6F6;
+}
 .py-5{
     padding-top: 5px;
     padding-bottom: 5px;
+}
+.py-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.menu ul{
+    float: left;
+    list-style-type: none;
+    /*background-color: red;*/
+    margin-left: 15%;
+    margin-top: 20px;
+
+}
+.menu ul li{
+
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+.menu ul li a{
+    text-decoration: none;
+    /*background-color: green;*/
+    display: block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .5s;
+
+}
+.menu ul li a:hover{
+    background-color: white;
+}
+.logo img{
+    height: 85px;
+    width: 100%;
+}
+.dropdown-menu{
+    display: none;
+    background-color: red;
+    position: absolute;
+    top: 17px;
+}
+.dropdown-menu li{
+    width: 100%;
+}
+
+.menu ul li:hover .dropdown-menu{
+    display: block;
 }
