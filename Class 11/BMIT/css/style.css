@@ -248,3 +248,51 @@
         background-color: gray;
         margin: 5px 0;
     }
+    .pl-5{
+        padding-left: 5px;
+    }
+    .pr-5{
+        padding-right: 5px;
+    }
+    .px-5{
+        padding-left:  15px;
+        padding-right: 15px;
+    }
+    .footer img{
+        width: 100%;
+    }
+    .header-middle-bg{
+    background-color: #EFEFEF;
+    }
+    .footer-menu ul{
+        list-style-type: none;
+    }
+    .footer-menu ul li{
+        float: left;
+        margin: 10px;
+
+    }
+    .footer-menu ul li a{
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+    }
+    .footer-icon ul{
+        list-style-type: none;
+    }
+    .footer-icon ul li{
+        float: left;
+        margin-right: 10px;
+
+    }
+    .footer-icon ul li a{
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+    }
+    .copyright{
+        padding: 10px;
+    }
+    .copyright p{
+        text-align: right;
+    }
