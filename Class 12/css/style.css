@@ -1,0 +1,51 @@
+/*.div-one{*/
+/*    height: 300px;*/
+/*    width: 400px;*/
+/*    background-color: red;*/
+/*    float: left;*/
+/*    position: relative;*/
+/*    bottom: 100px;*/
+/*}*/
+/*.div-one{*/
+/*    height: 300px;*/
+/*    width: 400px;*/
+/*    background-color: red;*/
+/*    float: left;*/
+/*    position: absolute;*/
+/*   !*right: 0;*!*/
+/*   !* right: 100px;*!*/
+/*}*/
+/*.div-one{*/
+/*    height: 300px;*/
+/*    width: 400px;*/
+/*    background-color: red;*/
+/*    opacity: 0.8;*/
+/*   !* !*!*float: left;*!*!*!*/
+/*   !* !*position: absolute;*!*!*/
+/*   !* !*top: 0;*!*!*/
+/*   !* !*left: 100px;*!*!*/
+/*   !* left: 0;*!*/
+/*   !* top: 0;*!*/
+/*   !*!*right: 0;*!*!*/
+/*   !*!* right: 100px;*!*!*/
+/*   !* position: fixed;*!*/
+/*    position: sticky;*/
+/*    top: 0;*/
+
+/*}*/
+.div-one{
+        height: 300px;
+        width: 400px;
+        background-color: red;
+    position: relative;
+
+
+}
+.div-two{
+    height: 150px;
+    width: 200px;
+    background-color: #00ff2b;
+    position: absolute;
+    right: 0;
+
+}
