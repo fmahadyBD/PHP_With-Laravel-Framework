@@ -3,15 +3,16 @@ Position of Html Element:
 ->Satatic(defult):
       it willbe not move
 ->relative:
-        
-        
-        
-        
-        
-  
-  
-  
-  
-->absolute
-->fixed
+      we can use 4 propertiy
+      top,right,botom,left
+      It will be work it's Div position. not body position.
+      check left 0. it will be not work.it's change by himself
+ 
+->absolute:
+      It will be work on from body
+      check left 0. it will be  work. also check right
+->fixed:
+      it's postion will be fixed
+      
 ->Sticky
+if given top 0, it will be fixed in top
