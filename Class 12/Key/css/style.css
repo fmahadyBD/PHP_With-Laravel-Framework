@@ -1,0 +1,132 @@
+.text{
+    /*font-family: cursive;*/
+    /*font-family: cursive;*/
+    /*font-family: cursive;*/
+    font-family: basis-bitm;
+    font-size: 20px;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    /*text-shadow: 0px 2px 5px gray; all side*/
+    text-shadow: 5px 10px 5px black;
+    line-height: 40px;
+
+
+}
+@font-face {
+    font-family: basis-bitm;
+    src: url("../fonts/DancingScript-VariableFont_wght.ttf");
+}
+.box-one{
+    height: 300px;
+    width: 400px;
+ /*background: linear-gradient(to right,red,green,blue,orange,pink);*/
+    background: radial-gradient(red,orange ,black);
+}
+.box-two{
+
+    height: 200px;
+    width: 200px;
+    /*background-image:url("../img/desktop-wallpaper-anime-smiling-horror-scary-smile-thumbnail.jpg");*/
+
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*transform: rotateY(0deg);*/
+    /*transform: scale(1);*/
+    transition: 1s;
+    transform: skewY(35deg);
+    margin: 70px;
+    background-color: red;
+    float: left;
+}
+/*.box-two:hover{*/
+/*    !*transform: rotateY(3600deg);*!*/
+/*    !*transform: scale(1.5);*!*/
+/*    !*transform: skew(30deg);*!*/
+/*    !*transform: skewy(30deg);*!*/
+
+/*}*/
+.box-three{
+    float: left;
+    height: 200px;
+    width: 200px;
+    transition: 1s;
+    transform: skewY(-35deg);
+    margin: 70px 70px 70px 0px;
+    background-color: red;
+}
+
+/*@keyframes bitm {*/
+/*    !*from{background-color: red}*!*/
+/*    !*to{background-color: green}*!*/
+/*    0%{background-color: red}*/
+/*    20%{background-color: blue}*/
+/*    40%{background-color: tomato}*/
+/*    60%{background-color: darkorchid}*/
+/*    80%{background-color: aqua}*/
+
+/*    100%{background-color: green}*/
+
+/*}*/
+/*@keyframes bitm {*/
+/*    !*from{background-color: red}*!*/
+/*    !*to{background-color: green}*!*/
+/*    0%{background-color: red;*/
+/*        transform: rotate(0deg);*/
+
+
+/*    }*/
+/*    20%{background-color: blue;*/
+/*        transform: rotate(20deg);*/
+/*    }*/
+/*    40%{background-color: tomato;*/
+/*        transform: rotate(40deg);*/
+/*    }*/
+/*    60%{background-color: darkorchid;*/
+/*        transform: rotate(60deg);*/
+/*    }*/
+/*    80%{background-color: aqua;*/
+/*        transform: rotate(80deg);*/
+/*    }*/
+
+/*    100%{background-color: green;*/
+/*        transform: rotate(1000deg);*/
+/*    }*/
+
+/*}*/
+.div-1{
+    height: 500px;
+    width: 800px;
+    background-color: red;
+    animation-name: bitm;
+    animation-duration: 5s;
+    /*animation-iteration-count: 5;*/
+    animation-iteration-count: infinite;
+}
+@keyframes bitm {
+    /*from{background-color: red}*/
+    /*to{background-color: green}*/
+    0%{
+        background-image: url("../img/2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    50%{
+        background-image: url("../img/i1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    100%{
+        background-image: url("../img/i3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+}
