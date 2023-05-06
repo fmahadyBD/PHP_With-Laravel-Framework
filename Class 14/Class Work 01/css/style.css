@@ -2,3 +2,7 @@
 .h-500{
     height: 500px;
 }
+.my-caption{
+    background-color: rgba(0,0,0,.7);
+    bottom:200px;
+}
