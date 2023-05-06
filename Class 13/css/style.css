@@ -1,0 +1,8 @@
+.test li a:hover{
+ background-color: red;
+    color: white;
+}
+.dropdown-hover:hover .dropdown-menu{
+    display: block;
+    margin-top: 2px;
+}
