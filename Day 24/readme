@@ -1,8 +1,10 @@
 OOP
--> Specification---class
-    -.INFORMATION---- property/attribute/variable
-    -> activity--Method/behaviour//function
+ Specification---class
+    information---- property/attribute/variable
+        activity--Method/behaviour//function
     
     object sign -> (php)
     java object sign . 
+    $this -> 
+        ( OWN CLASS OBJECT)
     
