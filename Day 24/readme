@@ -8,3 +8,10 @@ OOP
     $this -> 
         ( OWN CLASS OBJECT)
     
+json {}
+  (jeson object)
+  key:value (in piar)
+  composer- pp dependency manager
+  psr-s kivabe eita load korbe
+  
+  command in file in termenal- composer dump-autoload
