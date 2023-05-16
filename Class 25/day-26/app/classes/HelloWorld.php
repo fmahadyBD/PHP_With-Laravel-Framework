@@ -67,9 +67,14 @@ public function index(){
 //
 //    }while($this->i<20);
 
-    echo $this->data[0];
-    foreach ($this->data as $item) {
-        echo '<br/>'.$item;
+//    echo $this->data[0];
+//
+//    foreach ($this->data as $item) {
+//        echo '<br/>'.$item;
+//
+//    }
+    foreach ($this->data as $key=> $item) {
+        echo '<br/>'.$key;
 
 }
 
