@@ -105,6 +105,7 @@ public function index(){
     ];
 
 //    echo $this->data[];
+    echo $this->data[0]['name'];
 
 
 
