@@ -79,9 +79,32 @@ public function index(){
     //=> array object
 
     //index =>value
-    $this->data=['name'=>'Fahim','email'=>'fmahadyBD@gmail.com','mobile'=>'01722003285'];
+    $this->data=[
+    0=>[
+        'name'      =>'Fahim',
+        'email'     =>'fmahadyBD@gmail.com',
+        'mobile'    =>'01722003285'
+    ],
+    1=>[
+        'name'      =>'Fahim',
+        'email'     =>'fmahadyBD@gmail.com',
+        'mobile'    =>'01722003285'
+    ],
+    2=>[
+        'name'      =>'Fahim',
+        'email'     =>'fmahadyBD@gmail.com',
+        'mobile'    =>'01722003285'
+    ],
+    3=>[
+        'name'      =>'Fahim',
+        'email'     =>'fmahadyBD@gmail.com',
+        'mobile'    =>'01722003285'
+    ],
 
-//    echo $this->data['name'];
+
+    ];
+
+//    echo $this->data[];
 
 
 
