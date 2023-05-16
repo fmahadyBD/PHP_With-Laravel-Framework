@@ -75,13 +75,15 @@ public function index(){
 //    }
 //    foreach ($this->data as $key=> $item) {
 //        echo '<br/>'.$key;
-    
-    //=> array object
-    $this->data=['name'=>'Fahim','email'=>'fmahadyBD@gmail.com','mobile'=>'01722003285'];
-    foreach ($this->data as $value){
-        echo '<br>'.$this->$value;
 
-}
+    //=> array object
+
+    //index =>value
+    $this->data=['name'=>'Fahim','email'=>'fmahadyBD@gmail.com','mobile'=>'01722003285'];
+
+//    echo $this->data['name'];
+
+
 
 
 
