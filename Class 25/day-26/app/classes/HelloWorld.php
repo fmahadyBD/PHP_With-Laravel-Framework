@@ -12,7 +12,7 @@ public function __construct()
     $this->message="Mahady Hasan Fahim <br>";
     $this->x=10;
     $this->y=20;
-    $this->data=[10,20,30,'01722','infomar@gmail.com',true,10,2];
+//    $this->data=[10,20,30,'01722','infomar@gmail.com',true,10,2];
 }
 public function index(){
 //    echo $this->message;
@@ -73,8 +73,13 @@ public function index(){
 //        echo '<br/>'.$item;
 //
 //    }
-    foreach ($this->data as $key=> $item) {
-        echo '<br/>'.$key;
+//    foreach ($this->data as $key=> $item) {
+//        echo '<br/>'.$key;
+    
+    //=> array object
+    $this->data=['name'=>'Fahim','email'=>'fmahadyBD@gmail.com','mobile'=>'01722003285'];
+    foreach ($this->data as $value){
+        echo '<br>'.$this->$value;
 
 }
 
