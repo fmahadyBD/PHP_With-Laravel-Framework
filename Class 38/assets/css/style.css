@@ -1,0 +1,48 @@
+.h-500{height: 500px;}
+.my-caption
+{
+    background-color: rgba(0,0,0,0.5);
+    /*position: absolute;*/
+    bottom: 150px;
+}
+.text-justify{text-align: justify!important;}
+
+.theme-bg{ background-color: #FF4800}
+.text-bg{ color: #FF4800}
+
+.nav-padding .nav-link
+{
+    padding: 25px 15px!important;
+    color: black;
+    transition: .5s;
+    font-weight:bolder;
+}
+.nav-padding .nav-link:hover
+{
+    background-color: #FF4800;
+    color:white;
+
+}
+.dropdown:hover .dropdown-menu
+{
+    display: block;
+}
+
+.banner-section
+{
+    height: 500px;
+    background-image: url("../img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-opacity-banner
+{
+    opacity: 93%;
+}
+
+.banner-content
+{
+    margin-top: 50px;
+}
