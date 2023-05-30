@@ -1,0 +1,17 @@
+{
+  "name": "day_37/day_37",
+  "type": "project",
+  "description": "A simple php project",
+  "keywords": [],
+  "license": "",
+  "require": {},
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "app//"
+    },
+    "files": [
+      "app/helpers/helper.php"
+    ]
+  }
+}
