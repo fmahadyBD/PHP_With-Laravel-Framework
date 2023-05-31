@@ -9,9 +9,17 @@ class Series
     public $i, $startingNumber, $endingNumber, $result;
 
     public function __construct($post)
+
     {
         $this->startingNumber=$post['starting_number'];
         $this->endingNumber=$post['ending_number'];
+
+     if( ($this->startingNumber) > ($this->endingNumber)){
+            $this->endingNumber=$post['starting_number'];
+            $this->startingNumber=$post['ending_number'];
+
+        }
+
 
     }
 
@@ -24,5 +32,8 @@ class Series
 
        }
        header("Location:action.php?page=series_one&result=$this->result");
+    }
+    public function seriesTwo(){
+
     }
 }
