@@ -1,0 +1,7 @@
+Header->action.php ifelse and use->
+ main class FUNCTION for get methon-> 
+main post for from with button click->
+->create view file and added it->
+crete Class for from->rectived value
+ from view file and it'c call from action.php post method
+
