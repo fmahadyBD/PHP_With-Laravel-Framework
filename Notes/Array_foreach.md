@@ -13,7 +13,7 @@
 ```powershell
  <ul class="navbar-nav">
             <?php foreach ($navData as $menu){?>
-            <li><a class="nav-link" href="action.php?page=<?php echo $menu['title'];?>"><?php echo $menu['id']; ?></a></li>
+            <li><a class="nav-link" href="action.php?page=<?php echo $menu['page'];?>"><?php echo $menu['id']; ?></a></li>
             <?php }?>
         </ul>
 
@@ -28,8 +28,8 @@ class News
     {
     $this->anews=[
         0        =>[
-                'id'        =>22,
-                "title"     =>'This is the news',
+                'id'        =>"Home",
+                "page"     =>'home',
         ],
     ];
     }
