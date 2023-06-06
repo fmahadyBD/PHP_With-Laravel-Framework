@@ -1,0 +1,11 @@
+1.xmapp
+2.composer
+3.nodejs
+4.7zip
+
+
+
+node -v
+shif+right click->powershell
+
+ composer create-project laravel/laravel
