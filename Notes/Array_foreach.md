@@ -9,6 +9,15 @@
             </ul>
 
 ```
+- clicked to goto
+```powershell
+ <ul class="navbar-nav">
+            <?php foreach ($navData as $menu){?>
+            <li><a class="nav-link" href="action.php?page=<?php echo $menu['title'];?>"><?php echo $menu['id']; ?></a></li>
+            <?php }?>
+        </ul>
+
+```
 
 - News Class:
  ```powershell
