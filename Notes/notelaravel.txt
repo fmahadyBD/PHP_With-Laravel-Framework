@@ -1,0 +1,25 @@
+
+adrres e cmd likha lagbe
+composer create-project laravel/laravel my-app
+
+MVC for:
+in 
+app->http->contolar
+php artisan make:controller HomeControler
+make fubction index()
+make return view
+
+
+view create:
+
+view
+
+web.php->
+user HomeCOn
+
+model: php artisan make:model Product
+
+
+
+Query Bui;der
+Elequent orm
