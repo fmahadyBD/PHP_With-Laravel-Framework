@@ -1,0 +1,13 @@
+INSERT INTO products(product_name,product_catagory,product_brand,product_price,product_image,product_discription) 
+VALUES('Product Two','Catagory Two','Brand two',299,'aja.jpg','this a useless product');
+
+
+
+Full texts
+id	
+product_name	
+product_catagory	
+product_brand	
+product_price	
+product_image	
+product_discription	
