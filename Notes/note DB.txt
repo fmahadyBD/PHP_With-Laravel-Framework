@@ -1,5 +1,5 @@
 
-C:\xampp\htdocs\Mahady-Hasan-Fahim\my-app>php artisan migrate
+php artisan migrate
 
 query builder Not follewd MVC
 Elequent ORM
