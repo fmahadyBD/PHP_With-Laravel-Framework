@@ -1,0 +1,9 @@
+
+C:\xampp\htdocs\Mahady-Hasan-Fahim\my-app>php artisan migrate
+
+query builder Not follewd MVC
+Elequent ORM
+myql prosedur
+
+php artisan make:model Product -m
+ model and migration create
