@@ -120,4 +120,37 @@ class HomeControler extends Controller
 @endsection
 ```
 # Make database:
+- step 1:
+
+<br>
+` make model for conection to data and from`
+```powershel
+php artisan make:model Product -m
+```
+## `Node: class name willbe singular:
+
+- Step 2:
+
+```powershell
+
+class Product extends Model
+{
+    use HasFactory;
+    public $timestamps=false;
+    private static $product;
+
+    public static function add($request){
+        self::$product=new Product();
+        self::$product->product_name        =$request->product_name;
+        self::$product->product_image       =$request->product_image;
+        self::$product->save();
+
+}
+}
+```
+`Request from from, and 1st is the name of the database colum name`
+- Step 3:
+
+`for creating Database`<br/>
+`.en file and give name of database that youu need to create`
 
