@@ -119,11 +119,14 @@ class HomeControler extends Controller
 
 @endsection
 ```
+
+
 # Make database:
 - step 1:
 
 <br>
-` make model for conection to data and from`
+`make model for conection to data and from`
+
 ```powershel
 php artisan make:model Product -m
 ```
@@ -152,5 +155,18 @@ class Product extends Model
 - Step 3:
 
 `for creating Database`<br/>
-`.en file and give name of database that youu need to create`
+`.en file and give name of database that youu need to create`<br/>
+`Now type this for create the table in your database:`
+```powershell
+php artisan migrate
+```
+### Naw make addProduct in HomeControler and call the model class:
 
+``` powershell
+
+ public function addProduct(Request $request){
+        Product::add($request);
+        return back()->with('message','Added');
+    }
+    
+ ```
