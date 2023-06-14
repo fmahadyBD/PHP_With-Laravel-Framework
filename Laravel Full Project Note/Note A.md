@@ -132,20 +132,33 @@ php artisan make:model Product -m
 ```
 ## `Node: class name willbe singular:
 
-- Step 2:
+- Step 2 in the margeate Product:
 
 ```powershell
+
+
 
 class Product extends Model
 {
     use HasFactory;
-    public $timestamps=false;
-    private static $product;
+       private static $product, $image, $imageName, $directory, $imageUrl;
 
-    public static function add($request){
-        self::$product=new Product();
+    public static function imageUpload($request)
+    {
+        self::$image      = $request->file('product_image');
+        self::$imageName  = self::$image->getClientOriginalName();
+        self::$directory  = "img/upload/";
+        self::$image->move(self::$directory, self::$imageName);
+        return self::$directory.self::$imageName; // img/upload/fising-coupe.jpeg
+    }
+
+    public static function newProduct($request)
+    {
+        self::$imageUrl = self::imageUpload($request);
+
+        self::$product = new Product();
         self::$product->product_name        =$request->product_name;
-        self::$product->product_image       =$request->product_image;
+        self::$product->product_image       = self::$imageUrl;
         self::$product->save();
 
 }
