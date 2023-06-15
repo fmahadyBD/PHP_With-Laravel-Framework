@@ -4,7 +4,8 @@ https://jetstream.laravel.com/3.x/introduction.html
 
 ```
 ### The install:
-```powershell composer require laravel/jetstream
+```powershell
+   composer require laravel/jetstream
 ```
 ### We need view: 
 ```powershell
