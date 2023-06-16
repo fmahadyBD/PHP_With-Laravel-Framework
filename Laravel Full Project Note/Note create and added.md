@@ -173,6 +173,10 @@ class Product extends Model
 ```powershell
 php artisan migrate
 ```
+#### If have chage in model class you can upload the database
+```powershell
+php artisan migrate
+```
 ### Naw make addProduct in HomeControler and call the model class:
 
 ``` powershell
