@@ -133,37 +133,37 @@ php artisan make:model Product -m
 ## `Node: class name willbe singular:
 
 - Step 2 in the margeate Product:
-
 ```powershell
 
 
 
-class Product extends Model
-{
-    use HasFactory;
-       private static $product, $image, $imageName, $directory, $imageUrl;
+   class Product extends Model
+   {
+       use HasFactory;
+          private static $product, $image, $imageName, $directory, $imageUrl;
+   
+       public static function imageUpload($request)
+       {
+           self::$image      = $request->file('product_image');
+           self::$imageName  = self::$image->getClientOriginalName();
+           self::$directory  = "img/upload/";
+           self::$image->move(self::$directory, self::$imageName);
+           return self::$directory.self::$imageName; // img/upload/fising-coupe.jpeg
+       }
+   
+       public static function newProduct($request)
+       {
+           self::$imageUrl = self::imageUpload($request);
+   
+           self::$product = new Product();
+           self::$product->product_name        =$request->product_name;
+           self::$product->product_image       = self::$imageUrl;
+           self::$product->save();
+   
+   }
+   }
+ ```
 
-    public static function imageUpload($request)
-    {
-        self::$image      = $request->file('product_image');
-        self::$imageName  = self::$image->getClientOriginalName();
-        self::$directory  = "img/upload/";
-        self::$image->move(self::$directory, self::$imageName);
-        return self::$directory.self::$imageName; // img/upload/fising-coupe.jpeg
-    }
-
-    public static function newProduct($request)
-    {
-        self::$imageUrl = self::imageUpload($request);
-
-        self::$product = new Product();
-        self::$product->product_name        =$request->product_name;
-        self::$product->product_image       = self::$imageUrl;
-        self::$product->save();
-
-}
-}
-```
 `Request from from, and 1st is the name of the database colum name`
 - Step 3:
 
@@ -172,34 +172,35 @@ class Product extends Model
 `Now type this for create the table in your database:`
 <hr/>
 `Make migrate table's colom`
+
 ```powershell
-<?php
-
-namespace App\Models;
-
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-class Student extends Model
-{
-    use HasFactory;
-    public static $student, $image,$imageName,$imageUrl, $directory;
-    public static function imageUpload($requuest){
-        self::$image    =$requuest->file('form_image');
-        self::$imageName    =self::$image->getClientOriginalName();
-        self::$directory    ="image/upload";
-        self::$image->move(self::$directory,self::$imageName);
-        return self::$directory.self::$imageName;
-    }
-    public static function addnew($request){
-        self::$imageUrl=self::imageUpload($request);
-        self::$student=new Student();
-        self::$student->name        =$request->name;
-        self::$student->image       =self::$imageUrl;
-        self::save();
-
-}
-}
+   <?php
+   
+   namespace App\Models;
+   
+   use Illuminate\Database\Eloquent\Factories\HasFactory;
+   use Illuminate\Database\Eloquent\Model;
+   
+   class Student extends Model
+   {
+       use HasFactory;
+       public static $student, $image,$imageName,$imageUrl, $directory;
+       public static function imageUpload($requuest){
+           self::$image    =$requuest->file('form_image');
+           self::$imageName    =self::$image->getClientOriginalName();
+           self::$directory    ="image/upload";
+           self::$image->move(self::$directory,self::$imageName);
+           return self::$directory.self::$imageName;
+       }
+       public static function addnew($request){
+           self::$imageUrl=self::imageUpload($request);
+           self::$student=new Student();
+           self::$student->name        =$request->name;
+           self::$student->image       =self::$imageUrl;
+           self::save();
+   
+   }
+   }
 
 ```
 
