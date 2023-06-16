@@ -170,12 +170,46 @@ class Product extends Model
 `for creating Database`<br/>
 `.en file and give name of database that youu need to create`<br/>
 `Now type this for create the table in your database:`
+<hr/>
+`Make migrate table's colom`
+```powershell
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Student extends Model
+{
+    use HasFactory;
+    public static $student, $image,$imageName,$imageUrl, $directory;
+    public static function imageUpload($requuest){
+        self::$image    =$requuest->file('form_image');
+        self::$imageName    =self::$image->getClientOriginalName();
+        self::$directory    ="image/upload";
+        self::$image->move(self::$directory,self::$imageName);
+        return self::$directory.self::$imageName;
+    }
+    public static function addnew($request){
+        self::$imageUrl=self::imageUpload($request);
+        self::$student=new Student();
+        self::$student->name        =$request->name;
+        self::$student->image       =self::$imageUrl;
+        self::save();
+
+}
+}
+
+```
+
+
 ```powershell
 php artisan migrate
 ```
 #### If have chage in model class you can upload the database
 ```powershell
-php artisan migrate
+php artisan migrate:fresh
 ```
 ### Naw make addProduct in HomeControler and call the model class:
 
