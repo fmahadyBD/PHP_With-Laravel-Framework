@@ -1,0 +1,69 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Product extends Model
+{
+
+    use HasFactory;
+    public static $image,$imageUrl,$imageName,$direcoty,$product;
+    public  static  function imageUpload($request){
+        self::$image =$request->file('product_image');
+        self::$imageName=self::$image->getClientOriginalName();
+        self::$direcoty='img/upload/';
+        self::$image->move(self::$direcoty,self::$imageName);
+        return self::$direcoty.self::$imageName;
+
+    }
+    public static function addProduct($request){
+//        dd($request->all());
+        self::$imageUrl=self::imageUpload($request);
+        self::$product=new Product();
+        self::$product->product_id=$request->product_id;
+        self::$product->product_name=$request->product_name;
+        self::$product->product_category=$request->product_category;
+        self::$product->product_brand=$request->product_brand;
+        self::$product->product_discription=$request->product_discription;
+        self::$product->product_image=self::$imageUrl;
+        self::$product->status=$request->status;
+        self::$product->save();
+
+    }
+    public static function updates($request,$id){
+        self::$product=Product::find($id);
+        if($request->file('product_image')){
+            if(file_exists(self::$product->product_image)){
+                unlink(self::$product->product_image);
+            }
+            self::$imageUrl=self::imageUpload($request);
+
+        }else{
+            self::$imageUrl=self::$product->product_image;
+        }
+        self::$product->product_id=$request->product_id;
+        self::$product->product_name=$request->product_name;
+        self::$product->product_category=$request->product_category;
+        self::$product->product_brand=$request->product_brand;
+        self::$product->product_discription=$request->product_discription;
+        self::$product->product_image=self::$imageUrl;
+        self::$product->status=$request->status;
+        self::$product->save();
+
+
+    }
+
+    public static function deleteProduct($id)
+    {
+        self::$product = Product::find($id);
+        if (file_exists(self::$product->product_image))
+        {
+            unlink(self::$product->product_image);
+        }
+        self::$product->delete();
+    }
+
+
+}

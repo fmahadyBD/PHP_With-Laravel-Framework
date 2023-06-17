@@ -1,0 +1,52 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Product;
+use Illuminate\Http\Request;
+
+class HomeControler extends Controller
+{
+    public  $products;
+
+    public function index(){
+        $this->product=Product::all();
+        return view('home',['products'=>$this->product]);
+
+    }
+    public function addProductView(){
+
+        return view('add');
+    }
+    public function addProduct(Request $request){
+        Product::addProduct($request);
+        return back()->with('message','Product info save successfully.');
+    }
+    public function updateView($id){
+
+        $this->product=Product::find($id);
+        return view('update',['product'=>$this->product]);
+
+    }
+
+    public function delete($id)
+    {
+        Product::deleteProduct($id);
+        return back()->with('message', 'Product info delete successfully.');
+    }
+
+
+    public function update(Request $request,$id){
+
+        Product::updates($request,$id);
+        return redirect('manage')->with('message','product update');
+
+
+    }
+
+
+    public function manage(){
+        $this->products=Product::all();
+        return view('manage',['products'=>$this->products]);
+    }
+}
