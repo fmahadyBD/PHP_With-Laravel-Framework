@@ -130,6 +130,10 @@ class HomeControler extends Controller
 ```powershel
 php artisan make:model Product -m
 ```
+- If you forget type -m
+```powershel
+php artisan make:migration create_products_table --create=products
+```
 ## `Node: class name willbe singular:
 
 - Step 2 in the margeate Product:
