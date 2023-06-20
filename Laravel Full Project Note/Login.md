@@ -40,7 +40,7 @@ php artisan migrate
 ### We need to create make conrtoller Dashboard:
 
 ```powershell
-php artisan make:controllerDashboard
+php artisan make:controller Dashboard
 
 ```
 ### Use dashboard class in web:
