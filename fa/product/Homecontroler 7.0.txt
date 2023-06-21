@@ -1,0 +1,5 @@
+public function projectDetail($id)
+{
+    $project = Product::find($id);
+    return view('project.detail', ['project' => $project]);
+}

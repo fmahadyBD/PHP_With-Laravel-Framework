@@ -1,0 +1,88 @@
+- crate project
+- Create Database in phpmyadmin
+- php artisan make:controller HomeControler
+- Route recorrect like MVC
+- create function in HomeConroler
+- return view
+- create view.blade in resourese views
+- and create master.blade
+- bootstrap file past in public folder
+- code in master look like master 1.0
+- extends master in home.blade
+- php artisan serve
+- now code in home.blade lookslike 1.0;
+__________________________________________
+
+### Now we properly setup ourr code in 1st project
+
+#### Add something
+
+- create a model class
+- php artisan make:model Product -m
+- if you forget -m then type:   php artisan make:migration create_products_table --create=theameofmodelprural
+- Now create add.blade code like: add 1.0
+- make route in web.php for post for from submisttion
+- route create looks like: route 1.0
+- create function in class
+- function will looks like homeControler 1.0
+- now goto the Product controler and code looks like: Product 1.0
+- now Create database coumle in batabase->migrate->table name 
+- and code in here looks like: table 1.0
+- connect database into env by the nameof my database name corret my port and others
+- now migrate it i ternimal:php artisan migrate
+
+- -> Our 2d work is done now we need to call the add fuction
+
+
+- create route for view by cliking in button file looks like route 2.0
+- now create the function in HomeControler for call the view.blade files
+- now main part-> calling buttion set in master or others file there we want to call our funtion
+- file looks like: master 2.0
+
+________________________________________________________________________
+### Manage:
+
+- create manage.blade file and codelooklike: manage 1.0
+- create route for manage looks like route 3.0
+- now goto HomeControler and create funtion look like : homeControler 2.0
+- now product index recived from manage.blade look likes: manage 2.0
+- now main part-> calling buttion set in master or others file there we want to call our funtion
+- master file loooks like: master 3.0
+
+--------------------------------------------------------------------------
+
+### delete
+- create the bution herf manage looks like: manage 3.0
+- Create Route: looks like route 4.0
+- create function in HomeControler: looks like Homecontroler 3.0
+- Create function in Product model class look: Product 2.0
+-------------------------------------------------------------------------------
+
+#### Update
+- Call it from manage.blade file looks like manage 4.0
+- Create route for update lookslike : route 5.0 ---> for view
+- create function in homeControler looks like: Homecontroler 4.0
+- create update.blade file looks like update 1.0
+----------------------------------------------------------------------------------
+
+### Now Update Post
+
+- crate update post route in route: looks like route 6.0
+- create function HomeConroller:looks like Homecontroler 5.0
+- now create update function model class:looks like Product 3.0
+- Now Give the form action and route in update.blade file looks like  update 2.0
+--------------------------------------------------------------------------------------------
+
+### Home page:
+- It is already created 
+- create card for product:looks like home 2.0
+- Make HomeControler look like: Homecontroler 6.0
+___________________________________________________________
+
+Click and Detiels:
+- Create Route like: route 7.0
+- In home class looks like: Homecontroler 7.0
+- Now project/detail.blade.php create:
+
+
+

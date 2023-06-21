@@ -1,0 +1,59 @@
+@extends('master')
+
+@section('title')
+    Manage Product Page
+@endsection
+
+@section('body')
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-body">
+                        <h1 class="text-center text-success">All Product Info</h1>
+
+                        <hr/>
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>SL</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Brand</th>
+                                <th>Description</th>
+                                <th>Image</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img src=""alt="" height="60" width="80">
+                                    </td>
+
+                                    <td></td>
+
+                                    <td>
+                                        <a href="" class="btn btn-success">Edit</a>
+
+                                        <a href="" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure to delete this');">Delete</a>
+                                    </td>
+                                </tr>
+                         
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

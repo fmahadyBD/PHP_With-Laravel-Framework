@@ -1,0 +1,1 @@
+Route::post('/update/{id}', [HomeControler::class,'update'])->name('update');

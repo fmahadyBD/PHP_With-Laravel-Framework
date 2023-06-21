@@ -1,0 +1,5 @@
+    public function delete($id)
+    {
+        Product::deleteProduct($id);
+        return back()->with('message', 'Product info delete successfully.');
+    }

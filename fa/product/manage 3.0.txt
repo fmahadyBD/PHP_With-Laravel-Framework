@@ -1,0 +1,1 @@
+  <a href="{{route('delete-product', ['id' => $product->id])}}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure to delete this');">Delete</a>

@@ -1,0 +1,6 @@
+    public function updateView($id){
+
+        $this->product=Product::find($id);
+        return view('update',['product'=>$this->product]);
+
+    }

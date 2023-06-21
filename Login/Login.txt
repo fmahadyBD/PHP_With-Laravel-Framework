@@ -1,0 +1,14 @@
+- composer require laravel/jetsloginViewtream
+- php artisan jetstream:install livewire
+- php artisan make:controller Dashboard
+- make Route Look like: lroute 1.0
+- code Dashboard look like dashboard 1.0
+- create Now Make a view dashboard.blade.php
+- code it look like bashboard master 1.0
+- php artisan migrate if show error
+- Make drop Down menu in master.php
+- master code looks like lmaster 1.0
+- create with filter in maste looks like lmaser 2.0
+- Now edit the login fuction looks like: 
+- Now full and finale Route:: sroute
+

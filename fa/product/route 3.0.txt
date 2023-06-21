@@ -1,0 +1,1 @@
+Route::get('/manage', [HomeControler::class,'manage'])->name('manage');

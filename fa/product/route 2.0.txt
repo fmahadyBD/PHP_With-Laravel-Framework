@@ -1,0 +1,9 @@
+
+Route::get('/', [HomeControler::class,'index'])->name('home');
+Route::post('/addProduct', [HomeControler::class,'addProduct'])->name('addProduct');
+
+
+Route::get('/add-Product', [HomeControler::class,'addProductView'])->name('addProductView');
+
+
+

@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+    <div class="container">
+        <ul class="navbar-nav">
+            <li> <a class="nav-link" href="{{route('home')}}">Home</a> </li>
+            <li> <a class="nav-link" href="{{route('addProductView')}}">Add Product</a> </li>
+            <li> <a class="nav-link" href="{{route('manage')}}">Manage Product</a></li>
+            <li> <a class="nav-link" href="">About</a></li>
+        </ul>
+    </div>
+</nav>

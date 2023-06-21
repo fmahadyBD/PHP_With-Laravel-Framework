@@ -1,0 +1,7 @@
+Route::get('/', [HomeControler::class,'index'])->name('home');
+Route::get('/add-Product', [HomeControler::class,'addProductView'])->name('addProductView');
+Route::post('/addProduct', [HomeControler::class,'addProduct'])->name('addProduct');
+Route::get('/manage', [HomeControler::class,'manage'])->name('manage');
+
+
+Route::get('/delete-product/{id}', [HomeControler::class, 'delete'])->name('delete-product');

@@ -1,0 +1,9 @@
+  public static function deleteProduct($id)
+    {
+        self::$product = Product::find($id);
+        if (file_exists(self::$product->product_image))
+        {
+            unlink(self::$product->product_image);
+        }
+        self::$product->delete();
+    }

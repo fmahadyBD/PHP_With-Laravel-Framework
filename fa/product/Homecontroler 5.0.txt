@@ -1,0 +1,7 @@
+    public function update(Request $request,$id){
+
+        Product::updates($request,$id);
+        return redirect('manage')->with('message','product update');
+
+
+    }

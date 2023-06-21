@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeControler;
+use App\Http\Controllers\Dashboard;
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+
+Route::get('/', [HomeControler::class,'index'])->name('home');
+
+
+
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
+    Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard');
+    Route::get('/add-Product', [HomeControler::class,'addProductView'])->name('addProductView');
+    Route::post('/addProduct', [HomeControler::class,'addProduct'])->name('addProduct');
+    Route::get('/manage', [HomeControler::class,'manage'])->name('manage');
+    Route::get('/delete-product/{id}', [HomeControler::class, 'delete'])->name('delete-product');
+    Route::get('/update-view/{id}', [HomeControler::class,'updateView'])->name('updateView');
+    Route::post('/update/{id}', [HomeControler::class,'update'])->name('update');
+    Route::get('/project/{id}', [HomeControler::class, 'projectDetail'])->name('project.detail');
+
+
+});

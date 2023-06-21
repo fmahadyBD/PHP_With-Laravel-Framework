@@ -1,0 +1,4 @@
+    public function addProduct(Request $request){
+        Product::addProduct($request);
+        return back()->with('message','Product info save successfully.');
+    }

@@ -1,0 +1,4 @@
+    public function manage(){
+        $this->products=Product::all();
+        return view('manage',['products'=>$this->products]);
+    }

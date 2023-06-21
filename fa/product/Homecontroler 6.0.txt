@@ -1,0 +1,7 @@
+ public  $products;
+
+    public function index(){
+        $this->product=Product::all();
+        return view('home',['products'=>$this->product]);
+
+    }

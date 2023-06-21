@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@yield('title')</title>
+    <link rel="stylesheet" href="{{asset('/')}}css/bootstrap.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="{{route('home')}}">Home</a></li>
+            <li><a class="nav-link" href="{{route('addProductView')}}">Add Product</a></li>
+            <li><a class="nav-link" href="{{route('manage')}}">Manage Product</a></li>
+            <li><a class="nav-link" href="">About</a></li>
+            @auth
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{Auth::user()->name}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="{{route('dashboard')}}" class="dropdown-item">Dashboard</a>
+                        <a href="#" class="dropdown-item"
+                           onclick="event.preventDefault(); document.getElementById('logoutForm').submit();">Logout</a>
+                        <form action="{{route('logout')}}" method="POST" id="logoutForm">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @else
+                <li><a href="{{route('login')}}" class="nav-link">Login</a></li>
+            @endauth
+        </ul>
+    </div>
+</nav>
+
+@yield('body')
+
+<script src="{{asset('/')}}js/bootstrap.bundle.js"></script>
+</body>
+</html>

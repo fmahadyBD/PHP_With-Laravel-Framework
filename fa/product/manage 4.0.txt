@@ -1,0 +1,5 @@
+   <td>
+                                <a href="{{route('updateView',['id'=>$product->id])}}" class="btn btn-success">Edit</a>
+
+                                <a href="{{route('delete-product', ['id' => $product->id])}}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure to delete this');">Delete</a>
+                            </td>

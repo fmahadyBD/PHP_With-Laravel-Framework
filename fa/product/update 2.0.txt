@@ -1,0 +1,1 @@
+ <form action="{{route('update',['id'=>$product->id])}}" method="POST" enctype="multipart/form-data">

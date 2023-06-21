@@ -1,0 +1,14 @@
+ public function up(): void
+    {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('product_id');
+            $table->string('product_name');
+            $table->string('product_category');
+            $table->string('product_brand');
+            $table->text('product_discription');
+            $table->text('product_image');
+            $table->tinyInteger('status')->default(1);
+            $table->timestamps();
+        });
+    }
