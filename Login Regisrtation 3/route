@@ -1,0 +1,6 @@
+use App\Http\Controllers\LogController;
+
+// ...
+
+// Registration Route
+Route::get('/register', [LogController::class, 'showRegistrationForm'])->name('register');
